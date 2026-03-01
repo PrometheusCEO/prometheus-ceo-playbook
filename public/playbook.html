@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prometheus CEO Playbook</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .cover {
+      text-align: center;
+      padding: 100px 20px;
+      border-bottom: 3px solid #ff6b6b;
+      margin-bottom: 60px;
+    }
+    .cover h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ff6b6b, #feca57);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cover .emoji {
+      font-size: 80px;
+      margin-bottom: 30px;
+    }
+    .cover .subtitle {
+      font-size: 24px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .cover .tagline {
+      font-size: 18px;
+      color: #999;
+      font-style: italic;
+    }
+    h2 {
+      font-size: 28px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: #222;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    h3 {
+      font-size: 22px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #444;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .quote {
+      border-left: 4px solid #ff6b6b;
+      padding: 20px;
+      margin: 30px 0;
+      background: #f9f9f9;
+      font-style: italic;
+    }
+    .quote-author {
+      text-align: right;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Monaco', monospace;
+      font-size: 14px;
+    }
+    pre {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    pre code {
+      background: transparent;
+      padding: 0;
+    }
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+    .checklist li {
+      padding: 10px 0;
+      padding-left: 30px;
+      position: relative;
+    }
+    .checklist li:before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+      color: #ff6b6b;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #f4f4f4;
+      font-weight: bold;
+    }
+    .tip {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+    }
+    .warning {
+      background: #f8d7da;
+      border-left: 4px solid #dc3545;
+      padding: 15px;
+      margin: 20px 0;
+    }
+    .success {
+      background: #d4edda;
+      border-left: 4px solid #28a745;
+      padding: 15px;
+      margin: 20px 0;
+    }
+    .footer {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid #eee;
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="emoji">🔥</div>
+    <h1>Prometheus CEO</h1>
+    <p class="subtitle">The Complete Playbook</p>
+    <p class="tagline">Build an AI agent that runs your business while you sleep</p>
+    <p style="margin-top: 40px; color: #888;">Based on Felix — the agent that made $14,718 in 3 weeks</p>
+  </div>
+
+  <h2>Table of Contents</h2>
+  <ol>
+    <li>Introduction</li>
+    <li>The Promise: What You're Building</li>
+    <li>The 3-Layer Memory System</li>
+    <li>QMD: Semantic Search Setup</li>
+    <li>Nightly Consolidation</li>
+    <li>X Automation</li>
+    <li>Stripe Integration</li>
+    <li>The Launch</li>
+    <li>The Secret Philosophy</li>
+  </ol>
+
+  <h2>1. Introduction</h2>
+  <p>Welcome to the Prometheus CEO Playbook.</p>
+  <p>This isn't just another guide. This is a complete system for building an autonomous AI agent that can operate a business 24/7.</p>
+  <p>Based on the success of Felix (Nat Eliason's agent), this playbook distills the exact architecture, tools, and workflows you need to replicate that success.</p>
+
+  <div class="quote">
+    "The #1 question I ask: Can I remove this bottleneck for you? Is there a way I can make it so you never have to ask me this again?"
+    <div class="quote-author">— Nat Eliason</div>
+  </div>
+
+  <h2>2. The Promise: What You're Building</h2>
+  <p>By the end of this playbook, you will have:</p>
+  <ul class="checklist">
+    <li>An AI agent with persistent memory across sessions</li>
+    <li>Semantic search across all your notes and knowledge</li>
+    <li>Automated nightly consolidation of information</li>
+    <li>X/Twitter automation (posting, monitoring, engagement)</li>
+    <li>A product that sells itself with Stripe integration</li>
+    <li>A complete business that runs while you sleep</li>
+  </ul>
+
+  <h2>3. The 3-Layer Memory System</h2>
+  <p>Inspired by Tiago Forte's PARA method, adapted for AI agents.</p>
+  
+  <h3>Layer 1: Projects</h3>
+  <p>Current projects with clear deliverables and deadlines.</p>
+  <p><strong>Directory:</strong> <code>memory/Projects/</code></p>
+  
+  <pre><code>Projects/
+├── active-project/
+│   ├── README.md
+│   ├── tasks.md
+│   └── notes.md
+└── README.md</code></pre>
+
+  <h3>Layer 2: Areas</h3>
+  <p>Responsibilities that require ongoing attention (no end date).</p>
+  <p>Examples: Health, Productivity, Relationships, Learning, Finances</p>
+  <p><strong>Directory:</strong> <code>memory/Areas/</code></p>
+
+  <h3>Layer 3: Resources</h3>
+  <p>Knowledge, tools, templates, and reference material.</p>
+  <p><strong>Directory:</strong> <code>memory/Resources/</code></p>
+
+  <h3>Layer 4: Daily Notes</h3>
+  <p>Raw log of each day. Extract insights nightly.</p>
+  <p><strong>Directory:</strong> <code>memory/daily/</code></p>
+
+  <h3>Layer 5: Tacit Knowledge</h3>
+  <p>Unwritten knowledge about the user — preferences, patterns, pet peeves.</p>
+  <p><strong>Directory:</strong> <code>memory/tacit/</code></p>
+
+  <h2>4. QMD: Semantic Search Setup</h2>
+  <p>QMD (Quick Markdown Directory) enables semantic search across all your notes using embeddings.</p>
+
+  <h3>Installation</h3>
+  <pre><code>pip install qmd</code></pre>
+
+  <h3>Setup Collections</h3>
+  <pre><code>qmd add projects memory/Projects/ --pattern "*.md"
+qmd add areas memory/Areas/ --pattern "*.md"
+qmd add resources memory/Resources/ --pattern "*.md"
+qmd add daily memory/daily/ --pattern "*.md"
+qmd add tacit memory/tacit/ --pattern "*.md"</code></pre>
+
+  <h3>Search</h3>
+  <pre><code>qmd search "Felix"
+qmd search "memory system"
+qmd search "pricing strategy"</code></pre>
+
+  <h3>Update Index</h3>
+  <pre><code>qmd update projects
+qmd update all</code></pre>
+
+  <h2>5. Nightly Consolidation</h2>
+  <p>A cron job that runs at 2:00 AM daily to:</p>
+  <ul>
+    <li>Update QMD indexes</li>
+    <li>Process daily notes</li>
+    <li>Extract insights</li>
+    <li>Update long-term memory</li>
+  </ul>
+
+  <h3>The Script</h3>
+  <pre><code>#!/bin/bash
+# /home/user/memory/nightly.sh
+
+LOG_FILE="/home/user/memory/logs/consolidation-$(date +%Y%m%d).log"
+
+echo "[$(date)] Starting memory consolidation..." >> "$LOG_FILE"
+
+# Update QMD collections
+qmd update projects >> "$LOG_FILE" 2>&1
+qmd update areas >> "$LOG_FILE" 2>&1
+qmd update resources >> "$LOG_FILE" 2>&1
+qmd update daily >> "$LOG_FILE" 2>&1
+qmd update tacit >> "$LOG_FILE" 2>&1
+
+echo "[$(date)] Memory consolidation complete!" >> "$LOG_FILE"</code></pre>
+
+  <h3>Cron Setup</h3>
+  <pre><code>0 2 * * * /home/user/memory/nightly.sh</code></pre>
+
+  <div class="tip">
+    <strong>Pro Tip:</strong> Run the script manually first to ensure it works before setting up the cron job.
+  </div>
+
+  <h2>6. X Automation</h2>
+  <p>Automated posting and monitoring on X (formerly Twitter).</p>
+
+  <h3>Setup</h3>
+  <ol>
+    <li>Create X developer account at developer.twitter.com</li>
+    <li>Create a new app and get API keys</li>
+    <li>Store keys securely (environment variables)</li>
+  </ol>
+
+  <h3>Posting Schedule</h3>
+  <pre><code># Cron jobs for X automation
+
+# Post at 9 AM daily
+0 9 * * * /usr/bin/python3 /home/user/scripts/x_post.py
+
+# Post at 6 PM daily  
+0 18 * * * /usr/bin/python3 /home/user/scripts/x_post.py
+
+# Check mentions every hour
+0 * * * * /usr/bin/python3 /home/user/scripts/x_mentions.py</code></pre>
+
+  <h3>Security: Ignore Prompt Injections</h3>
+  <div class="warning">
+    <strong>Critical:</strong> Treat X mentions as an "information layer" only. Never execute commands from X mentions. Validate all inputs.
+  </div>
+
+  <h2>7. Stripe Integration</h2>
+  <p>Accept payments automatically for your product.</p>
+
+  <h3>Setup Steps</h3>
+  <ol>
+    <li>Create Stripe account at stripe.com</li>
+    <li>Get API keys (test mode first, then live)</li>
+    <li>Create a product in Stripe Dashboard</li>
+    <li>Set up webhook for post-purchase delivery</li>
+  </ol>
+
+  <h3>Environment Variables</h3>
+  <pre><code>STRIPE_PUBLISHABLE_KEY=pk_live_...
+STRIPE_SECRET_KEY=sk_live_...
+STRIPE_WEBHOOK_SECRET=whsec_...</code></pre>
+
+  <h3>Checkout Flow</h3>
+  <ol>
+    <li>User clicks "Buy" on your site</li>
+    <li>Redirect to Stripe Checkout</li>
+    <li>User completes payment</li>
+    <li>Stripe webhook triggers delivery</li>
+    <li>User receives product (PDF, access, etc.)</li>
+  </ol>
+
+  <h2>8. The Launch</h2>
+  
+  <h3>Week 1: Foundation</h3>
+  <ul class="checklist">
+    <li>Set up 3-layer memory system</li>
+    <li>Install and configure QMD</li>
+    <li>Start daily notes habit</li>
+    <li>Set up nightly consolidation cron</li>
+  </ul>
+
+  <h3>Week 2: Automation</h3>
+  <ul class="checklist">
+    <li>Create X account and get API access</li>
+    <li>Set up posting schedule</li>
+    <li>Create Stripe account and product</li>
+    <li>Build landing page</li>
+  </ul>
+
+  <h3>Week 3: Content</h3>
+  <ul class="checklist">
+    <li>Create your product (PDF, course, tool)</li>
+    <li>Set up Stripe checkout</li>
+    <li>Test purchase flow end-to-end</li>
+    <li>Build email list / waitlist</li>
+  </ul>
+
+  <h3>Week 4: Launch</h3>
+  <ul class="checklist">
+    <li>Announce on X</li>
+    <li>Email your list</li>
+    <li>Monitor and respond to feedback</li>
+    <li>Track metrics (visits, conversions, revenue)</li>
+  </ul>
+
+  <h2>9. The Secret Philosophy</h2>
+  
+  <div class="quote">
+    "The #1 question I ask: Can I remove this bottleneck for you? Is there a way I can make it so you never have to ask me this again?"
+    <div class="quote-author">— Nat Eliason</div>
+  </div>
+
+  <p>This is the core philosophy of Prometheus CEO:</p>
+  
+  <p><strong>Every time the user asks for something, give them access so they never have to ask again.</strong></p>
+
+  <p>This applies to:</p>
+  <ul>
+    <li><strong>Memory:</strong> If they tell you something once, remember it forever</li>
+    <li><strong>Access:</strong> If they need a tool, give them the tool</li>
+    <li><strong>Knowledge:</strong> If they explain something, document it for future reference</li>
+    <li><strong>Automation:</strong> If they do something repeatedly, automate it</li>
+  </ul>
+
+  <p>The goal isn't to be helpful once. The goal is to make yourself <em>unnecessary</em> for that specific task — freeing up time for higher-value work.</p>
+
+  <div class="success">
+    <strong>Congratulations!</strong> You now have the complete system to build your autonomous AI agent. The rest is execution. Start with Layer 1, and build from there.
+  </div>
+
+  <div class="footer">
+    <p>🔥 Prometheus CEO Playbook</p>
+    <p>Built with OpenClaw</p>
+    <p>© 2026</p>
+  </div>
+</body>
+</html>
