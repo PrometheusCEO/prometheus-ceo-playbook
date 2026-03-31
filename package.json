@@ -10,11 +10,16 @@
   },
   "dependencies": {
     "next": "14.2.5",
+    "nodemailer": "^6.10.1",
+    "puppeteer": "^24.40.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^7.0.11",
     "@types/react": "^18",
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.8",
