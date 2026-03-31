@@ -53,7 +53,7 @@ export function NavMenu() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="fixed inset-x-0 bottom-0 top-[72px] z-[60] border-b border-white/10 bg-[#0f0f0f] shadow-2xl md:hidden">
+        <div className="absolute left-0 right-0 top-full z-[60] h-[calc(100vh-72px)] border-b border-white/10 bg-[#0f0f0f] shadow-2xl md:hidden">
           <div className="flex h-full flex-col gap-4 overflow-y-auto px-5 py-6">
             {links.map((l) => (
               <Link
