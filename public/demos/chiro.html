@@ -156,6 +156,35 @@
       border-radius: 50%;
     }
 
+    .hero-visual-wrap {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 1.15rem;
+      padding: 0.75rem;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,250,242,0.92));
+      border: 1px solid rgba(31, 122, 122, 0.1);
+    }
+
+    .hero-visual {
+      display: block;
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(31, 122, 122, 0.1);
+    }
+
+    .hero-visual-label {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      margin-top: 0.65rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+    }
+
     .mini-list {
       display: grid;
       gap: 0.9rem;
@@ -363,6 +392,10 @@
       </div>
 
       <aside class="hero-card">
+        <div class="hero-visual-wrap">
+          <img class="hero-visual" src="/demos/hero-chiro-wellness.svg" alt="Illustrated premium chiropractic wellness room with an adjustment table and exam light." />
+          <span class="hero-visual-label">Illustrated demo visual</span>
+        </div>
         <h3>Start with a simple plan</h3>
         <div class="mini-list">
           <div class="mini-item"><strong>New Patient Special:</strong> Consultation + posture review + care recommendations</div>

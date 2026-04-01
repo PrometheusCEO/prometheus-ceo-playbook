@@ -164,6 +164,32 @@
       padding: 1.5rem;
     }
 
+    .hero-visual-wrap {
+      margin-bottom: 1.15rem;
+      padding: 0.75rem;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-visual {
+      display: block;
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+
+    .hero-visual-label {
+      display: inline-flex;
+      margin-top: 0.65rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+    }
+
     .hero-card .stat-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -373,6 +399,10 @@
         </div>
 
         <aside class="card hero-card">
+          <div class="hero-visual-wrap">
+            <img class="hero-visual" src="/demos/hero-roofing-scene.svg" alt="Illustrated premium roofing scene showing a home roofline and service light." />
+            <span class="hero-visual-label">Illustrated demo visual</span>
+          </div>
           <h2 style="font-size:1.5rem; margin-bottom:0.75rem;">Why homeowners choose Summit</h2>
           <p style="color:var(--muted); margin-bottom:0;">
             From leak repairs to full roof replacements, this demo highlights the kind of trust-building content local service businesses need to convert visitors into calls.
