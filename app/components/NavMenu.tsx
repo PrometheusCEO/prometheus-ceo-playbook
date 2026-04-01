@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const links = [
   { href: "/landing-pages", label: "Landing Pages" },
+  { href: "/examples", label: "Examples" },
   { href: "/cold-email-sequences", label: "Cold Email" },
   { href: "/website-seo-audit", label: "SEO Audit" },
   { href: "/ai-agent-setup", label: "AI Agent Setup" },

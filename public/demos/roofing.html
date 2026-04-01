@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summit Roofing Co. | Dallas Roofing Experts</title>
+  <meta name="description" content="Summit Roofing Co. is a fictional Dallas, TX roofing company demo landing page created by Prometheus CEO." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a30;
+      --panel-2: #18223f;
+      --text: #f3f6ff;
+      --muted: #a7b4d6;
+      --accent: #f59e0b;
+      --accent-2: #ffcc66;
+      --line: rgba(255,255,255,0.08);
+      --success: #22c55e;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(245,158,11,0.12), transparent 25%),
+        linear-gradient(180deg, #0b1020 0%, #0a1225 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .demo-banner {
+      background: linear-gradient(90deg, #f59e0b, #f97316);
+      color: #1f1300;
+      text-align: center;
+      padding: 0.85rem 1rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      font-size: 0.95rem;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 5rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgba(245,158,11,0.28);
+      background: rgba(245,158,11,0.1);
+      color: var(--accent-2);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.8rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 62ch;
+      margin-bottom: 1.75rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0.9rem 1.25rem;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #f97316);
+      color: #1c1204;
+      box-shadow: 0 10px 30px rgba(249,115,22,0.3);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero-points span {
+      padding: 0.5rem 0.75rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .card,
+    .service,
+    .trust-item,
+    .testimonial,
+    .contact-box {
+      background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 1.5rem;
+    }
+
+    .hero-card .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .stat {
+      padding: 1rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.45rem;
+      margin-bottom: 0.25rem;
+      color: var(--accent-2);
+    }
+
+    section {
+      padding: 1.25rem 0 4rem;
+    }
+
+    .section-head {
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-head p { color: var(--muted); }
+
+    .services-grid,
+    .trust-grid,
+    .testimonials-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .service {
+      padding: 1.4rem;
+    }
+
+    .service .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(245,158,11,0.12);
+      color: var(--accent-2);
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .service p,
+    .trust-item p,
+    .testimonial p,
+    .contact-box p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .trust-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .trust-item,
+    .testimonial {
+      padding: 1.4rem;
+    }
+
+    .trust-item strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .example-label {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      background: rgba(34,197,94,0.12);
+      color: #8df0b0;
+      border: 1px solid rgba(34,197,94,0.2);
+    }
+
+    .testimonial footer {
+      margin-top: 1rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .contact-wrap {
+      padding-bottom: 5rem;
+    }
+
+    .contact-box {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      color: var(--muted);
+    }
+
+    .contact-list span {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .contact-panel {
+      padding: 1.2rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+    }
+
+    .contact-panel strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer.site-footer {
+      border-top: 1px solid var(--line);
+      padding: 1.5rem 0 2.5rem;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .contact-box,
+      .services-grid,
+      .trust-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 3.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(calc(100% - 1.25rem), var(--max)); }
+      .demo-banner { font-size: 0.85rem; }
+      .hero-card .stat-grid { grid-template-columns: 1fr 1fr; }
+      .btn { width: 100%; }
+      .cta-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-banner">
+    SAMPLE / DEMO LANDING PAGE — PrometheusCEO Landing Pages Service ($197)
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Dallas, TX Roofing Demo</div>
+          <h1>Summit Roofing Co.</h1>
+          <p class="lead">
+            Protect your home with dependable roofing solutions built for Texas weather. This fictional example showcases a clean, high-converting landing page for a local roofing business.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">Get Your Free Roof Estimate</a>
+            <a class="btn btn-secondary" href="#services">View Services</a>
+          </div>
+          <div class="hero-points">
+            <span>Storm damage support</span>
+            <span>Residential & commercial</span>
+            <span>Fast local response</span>
+          </div>
+        </div>
+
+        <aside class="card hero-card">
+          <h2 style="font-size:1.5rem; margin-bottom:0.75rem;">Why homeowners choose Summit</h2>
+          <p style="color:var(--muted); margin-bottom:0;">
+            From leak repairs to full roof replacements, this demo highlights the kind of trust-building content local service businesses need to convert visitors into calls.
+          </p>
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>24/7</strong>
+              <span>Emergency response demo</span>
+            </div>
+            <div class="stat">
+              <strong>Free</strong>
+              <span>Inspections & estimates</span>
+            </div>
+            <div class="stat">
+              <strong>A+</strong>
+              <span>Trust-first positioning</span>
+            </div>
+            <div class="stat">
+              <strong>Local</strong>
+              <span>Dallas-area service focus</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Roofing services that keep your property covered</h2>
+          <p>
+            A strong local landing page makes it easy for customers to understand what you offer and why they should contact you today.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service">
+            <div class="icon">🏠</div>
+            <h3>Roof Replacement</h3>
+            <p>Complete tear-off and replacement solutions for aging, damaged, or storm-worn roofs.</p>
+          </article>
+          <article class="service">
+            <div class="icon">🛠️</div>
+            <h3>Roof Repair</h3>
+            <p>Targeted repairs for leaks, missing shingles, flashing issues, and weather-related damage.</p>
+          </article>
+          <article class="service">
+            <div class="icon">⛈️</div>
+            <h3>Storm Damage Restoration</h3>
+            <p>Rapid post-storm inspections and restoration support to help properties recover quickly.</p>
+          </article>
+          <article class="service">
+            <div class="icon">🏢</div>
+            <h3>Commercial Roofing</h3>
+            <p>Reliable roofing support for office buildings, retail properties, and multi-unit facilities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Built to inspire trust from the first click</h2>
+          <p>These trust points are the kind of conversion-focused messaging that help service businesses win more local leads.</p>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <strong>Local Dallas expertise</strong>
+            <p>Messaging tailored to the roofing needs of North Texas homes and businesses.</p>
+          </div>
+          <div class="trust-item">
+            <strong>Clear, honest estimates</strong>
+            <p>Upfront communication and easy next steps help remove friction before the first call.</p>
+          </div>
+          <div class="trust-item">
+            <strong>Responsive customer care</strong>
+            <p>Strong CTAs and reassuring copy make it simple for visitors to request help fast.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Example testimonials</h2>
+          <p>These are fictional testimonials included only to demonstrate layout and social-proof styling on a sample page.</p>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial">
+            <span class="example-label">FICTIONAL EXAMPLE</span>
+            <p>“Summit Roofing Co. made the entire process feel easy. The inspection was thorough, the communication was clear, and our new roof looks fantastic.”</p>
+            <footer>— Sarah M., Dallas homeowner</footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <span class="example-label">FICTIONAL EXAMPLE</span>
+            <p>“After a major storm, Summit Roofing Co. responded quickly and helped us understand our options. This is exactly the kind of trust a great landing page should convey.”</p>
+            <footer>— James R., property manager in Dallas</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-wrap">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <div class="eyebrow">Call-To-Action Section</div>
+            <h2>Ready to turn visitors into roofing leads?</h2>
+            <p>
+              This demo page is designed to show how Prometheus CEO can create fast, polished, conversion-focused local business landing pages.
+            </p>
+            <div class="contact-list">
+              <span>📍 Fictional service area: Dallas, TX</span>
+              <span>📞 Demo CTA: (214) 555-0198</span>
+              <span>✉️ Demo CTA: hello@summitroofingco.demo</span>
+            </div>
+          </div>
+          <div class="contact-panel">
+            <strong>Get a free estimate today</strong>
+            <p style="margin-bottom:1rem;">Use this section for a form embed, call button, or scheduling CTA in a real client deployment.</p>
+            <a class="btn btn-primary" href="tel:+12145550198" style="width:100%; margin-bottom:0.75rem;">Call the Demo Number</a>
+            <a class="btn btn-secondary" href="mailto:hello@summitroofingco.demo" style="width:100%;">Email for Demo Inquiry</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      This is a sample landing page created by Prometheus CEO — prometheusceo.com/landing-pages
+    </div>
+  </footer>
+</body>
+</html>

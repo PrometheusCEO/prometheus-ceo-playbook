@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Align Chiropractic & Wellness | Atlanta, GA</title>
+  <meta name="description" content="Demo landing page for Align Chiropractic & Wellness, a fictional chiropractic clinic in Atlanta, GA." />
+  <style>
+    :root {
+      --bg: #f8f4ec;
+      --bg-soft: #fffaf2;
+      --card: #fffdf8;
+      --teal: #1f7a7a;
+      --teal-dark: #155b5b;
+      --teal-soft: #d9efec;
+      --sand: #eadfce;
+      --text: #2c2a26;
+      --muted: #6b665e;
+      --accent: #c98a4b;
+      --shadow: 0 16px 40px rgba(31, 122, 122, 0.12);
+      --radius: 20px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg) 0%, #fdf9f3 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .demo-banner {
+      background: var(--teal-dark);
+      color: #fff;
+      text-align: center;
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 3rem 0 2rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--teal-soft);
+      color: var(--teal-dark);
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+      margin: 0 0 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 6vw, 4.6rem);
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+    }
+
+    p.lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 62ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin: 1.5rem 0 1.25rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1.3rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(31, 122, 122, 0.2);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--teal-dark);
+      border: 1px solid rgba(21, 91, 91, 0.2);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .hero-card {
+      background: radial-gradient(circle at top, #ffffff 0%, var(--bg-soft) 100%);
+      border: 1px solid rgba(31, 122, 122, 0.1);
+      box-shadow: var(--shadow);
+      border-radius: 28px;
+      padding: 1.6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -30px -30px auto;
+      width: 130px;
+      height: 130px;
+      background: rgba(201, 138, 75, 0.12);
+      border-radius: 50%;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .mini-item {
+      padding: 0.9rem 1rem;
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid rgba(31, 122, 122, 0.08);
+    }
+
+    .section {
+      padding: 2.5rem 0;
+    }
+
+    .section-alt {
+      background: rgba(255, 255, 255, 0.45);
+      border-top: 1px solid rgba(31, 122, 122, 0.07);
+      border-bottom: 1px solid rgba(31, 122, 122, 0.07);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(31, 122, 122, 0.08);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      box-shadow: 0 10px 24px rgba(44, 42, 38, 0.05);
+    }
+
+    .card .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--teal-soft);
+      color: var(--teal-dark);
+      font-size: 1.3rem;
+      margin-bottom: 0.9rem;
+      font-weight: 700;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .trust-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .trust-pill {
+      background: var(--teal-soft);
+      color: var(--teal-dark);
+      padding: 1rem;
+      border-radius: 16px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .testimonials-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: -0.25rem;
+      margin-bottom: 1rem;
+    }
+
+    blockquote {
+      margin: 0;
+      font-size: 1.03rem;
+      color: var(--text);
+    }
+
+    .quote-author {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.25rem;
+      align-items: stretch;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: #fff;
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1.2rem;
+    }
+
+    .contact-list div {
+      padding: 0.9rem 1rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.96rem;
+    }
+
+    .subtle {
+      color: var(--muted);
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .contact-wrap,
+      .grid-4,
+      .grid-3,
+      .trust-bar {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .hero {
+        padding-top: 2rem;
+      }
+
+      .hero-grid,
+      .contact-wrap,
+      .grid-4,
+      .grid-3,
+      .trust-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .demo-banner {
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-banner">
+    SAMPLE / DEMO landing page for PrometheusCEO's Landing Pages service ($197) — fictional business example.
+  </div>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Atlanta, GA Chiropractic Care</span>
+        <h1>Align Chiropractic &amp; Wellness</h1>
+        <p class="lead">
+          Feel better, move easier, and get back to daily life with personalized chiropractic care designed for busy Atlanta professionals, parents, and active adults.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Book Your First Visit</a>
+          <a class="btn btn-secondary" href="#services">Explore Services</a>
+        </div>
+        <p class="subtle">Gentle adjustments • Modern wellness support • Friendly local care</p>
+      </div>
+
+      <aside class="hero-card">
+        <h3>Start with a simple plan</h3>
+        <div class="mini-list">
+          <div class="mini-item"><strong>New Patient Special:</strong> Consultation + posture review + care recommendations</div>
+          <div class="mini-item"><strong>Flexible Scheduling:</strong> Early morning and evening appointments available</div>
+          <div class="mini-item"><strong>Whole-Body Focus:</strong> Relief, mobility, and healthy habits that support lasting progress</div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <h2>Services That Support Relief &amp; Everyday Wellness</h2>
+        <p class="lead">A warm, patient-first approach for common tension, pain, mobility, and recovery concerns.</p>
+        <div class="grid grid-4">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Spinal Adjustments</h3>
+            <p>Targeted chiropractic care to help reduce discomfort, improve alignment, and restore better movement patterns.</p>
+          </article>
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Posture &amp; Ergonomic Support</h3>
+            <p>Practical guidance for desk workers, commuters, and anyone dealing with neck, shoulder, or low-back strain.</p>
+          </article>
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Sports &amp; Active Recovery</h3>
+            <p>Mobility-focused care for runners, gym-goers, and active adults who want to recover smarter and move with confidence.</p>
+          </article>
+          <article class="card">
+            <div class="icon">04</div>
+            <h3>Wellness Maintenance Visits</h3>
+            <p>Ongoing support designed to help you stay aligned, reduce recurring tension, and keep progress on track.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="step-number">1</div>
+            <h3>Book Your Visit</h3>
+            <p>Choose a convenient time and tell us what’s been bothering you, whether it’s back pain, stiffness, headaches, or posture issues.</p>
+          </article>
+          <article class="card">
+            <div class="step-number">2</div>
+            <h3>Get a Personalized Assessment</h3>
+            <p>We review your health history, movement patterns, and goals so your care plan feels tailored instead of one-size-fits-all.</p>
+          </article>
+          <article class="card">
+            <div class="step-number">3</div>
+            <h3>Feel Better &amp; Stay Consistent</h3>
+            <p>Receive gentle, focused care plus simple recommendations to help you build momentum between appointments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Why Patients Choose Align</h2>
+        <div class="trust-bar">
+          <div class="trust-pill">Comfort-first care in a calm, welcoming environment</div>
+          <div class="trust-pill">Clear communication with practical next steps</div>
+          <div class="trust-pill">Convenient Atlanta location for busy schedules</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Testimonials</h2>
+        <p class="testimonials-note">The testimonials below are fictional examples included for this sample/demo page.</p>
+        <div class="grid grid-2 grid-3">
+          <article class="card">
+            <blockquote>
+              “Example testimonial: I came in with constant upper-back tension from working at a desk all week, and after a few visits I felt looser, slept better, and finally stopped dreading long workdays.”
+            </blockquote>
+            <div class="quote-author">— Jasmine R., Midtown Atlanta (fictional example)</div>
+          </article>
+          <article class="card">
+            <blockquote>
+              “Example testimonial: The team made everything feel easy and welcoming. I appreciated the clear explanations and how the care plan fit into my schedule without feeling overwhelming.”
+            </blockquote>
+            <div class="quote-author">— Marcus T., Buckhead (fictional example)</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-wrap">
+        <div class="contact-card">
+          <span class="eyebrow" style="background: rgba(255,255,255,0.16); color: #fff;">Ready to take the next step?</span>
+          <h2>Book a Consultation With Align Chiropractic &amp; Wellness</h2>
+          <p>
+            If you’re looking for chiropractic support in Atlanta, this is where a strong local landing page can turn visitors into appointments.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" style="background:#fff; color: var(--teal-dark);" href="mailto:hello@alignchirodemo.com">Request an Appointment</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Contact Details</h3>
+          <div class="contact-list">
+            <div><strong>Clinic:</strong> Align Chiropractic &amp; Wellness</div>
+            <div><strong>Location:</strong> Atlanta, Georgia</div>
+            <div><strong>Phone:</strong> (404) 555-0147 <span class="subtle">(demo number)</span></div>
+            <div><strong>Email:</strong> hello@alignchirodemo.com <span class="subtle">(demo email)</span></div>
+          </div>
+          <p class="subtle" style="margin-top:1rem;">This contact information is included for demonstration purposes only.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      This is a sample landing page created by Prometheus CEO — prometheusceo.com/landing-pages
+    </div>
+  </footer>
+</body>
+</html>

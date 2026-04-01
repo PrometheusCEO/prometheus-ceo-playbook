@@ -61,6 +61,9 @@ export default function HomePage() {
               Start a Project →
             </Link>
           </div>
+          <p className="mt-5 text-sm text-gray-500">
+            Want to preview the style? Browse our fictional <Link href="/examples" className="text-gray-300 underline decoration-white/20 underline-offset-4 hover:text-white">demo examples</Link>.
+          </p>
         </div>
       </section>
 

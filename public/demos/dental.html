@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Smile Dental | San Antonio, TX</title>
+  <meta name="description" content="Bright Smile Dental is a fictional demo dental practice landing page for San Antonio, TX created by Prometheus CEO." />
+  <style>
+    :root {
+      --blue: #0f5fa8;
+      --blue-dark: #0a4579;
+      --blue-light: #eaf4ff;
+      --sky: #f5fbff;
+      --text: #18324a;
+      --muted: #5f7487;
+      --white: #ffffff;
+      --border: #d9e6f2;
+      --shadow: 0 16px 40px rgba(15, 95, 168, 0.12);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .demo-banner {
+      background: #0a2d4f;
+      color: #fff;
+      text-align: center;
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+    }
+
+    .demo-banner strong { color: #8ed0ff; }
+
+    header.hero {
+      padding: 2.5rem 0 4rem;
+      background:
+        radial-gradient(circle at top right, rgba(73, 165, 255, 0.18), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #edf7ff 100%);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 2rem;
+    }
+
+    .brand {
+      font-weight: 800;
+      color: var(--blue-dark);
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.2rem;
+      background: var(--blue);
+      color: #fff;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue-dark);
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 { line-height: 1.15; margin: 0 0 1rem; }
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      color: var(--blue-dark);
+    }
+    h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--blue-dark); }
+    h3 { font-size: 1.2rem; color: var(--blue-dark); }
+
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 60ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 2px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--blue-dark);
+      border-color: var(--border);
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .hero-card,
+    .card,
+    .testimonial,
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 1.5rem;
+    }
+
+    .hero-card .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .stat,
+    .mini-panel {
+      background: var(--sky);
+      border-radius: 16px;
+      padding: 1rem;
+      border: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--blue-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    section {
+      padding: 4.5rem 0;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    .services-grid,
+    .trust-grid,
+    .testimonial-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-grid,
+    .testimonial-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonial-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      padding: 1.5rem;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--blue-light);
+      color: var(--blue-dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .about-panel,
+    .bio-panel {
+      padding: 1.8rem;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 1.2rem 0 0;
+    }
+
+    .checklist li {
+      margin-bottom: 0.75rem;
+      padding-left: 1.8rem;
+      position: relative;
+      color: var(--muted);
+    }
+
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .testimonial {
+      padding: 1.6rem;
+    }
+
+    .example-tag {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      background: #fff7db;
+      color: #8a6600;
+      border: 1px solid #f2de94;
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .quote {
+      font-size: 1.02rem;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .author {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .contact-card {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-wrap,
+      .contact-card,
+      .services-grid,
+      .trust-grid,
+      .testimonial-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-grid,
+      .about-wrap,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .services-grid,
+      .trust-grid,
+      .testimonial-grid,
+      .hero-card .stat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header.hero {
+        padding-top: 1.5rem;
+      }
+
+      section {
+        padding: 3.5rem 0;
+      }
+
+      .contact-card,
+      .hero-card,
+      .card,
+      .testimonial {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-banner">
+    <strong>DEMO SAMPLE</strong> — This fictional landing page showcases PrometheusCEO's Landing Pages service for <strong>$197</strong>.
+  </div>
+
+  <header class="hero">
+    <div class="container">
+      <nav>
+        <div class="brand">Bright Smile Dental</div>
+        <a class="nav-cta" href="#contact">Book a Demo Appointment</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Fictional Family Dentistry in San Antonio, TX</div>
+          <h1>Comfort-focused dental care designed to keep San Antonio smiling.</h1>
+          <p class="lead">
+            Bright Smile Dental is a fictional sample practice created to demonstrate how a modern local landing page can turn visitors into booked appointments.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Schedule Your Visit</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
+          </div>
+          <p class="hero-note">Same-week appointments, friendly financing guidance, and a calm patient-first experience.</p>
+        </div>
+
+        <aside class="hero-card">
+          <h3>Why families would choose Bright Smile Dental</h3>
+          <p class="lead" style="font-size:1rem; margin-bottom:0;">
+            A clean, welcoming office experience with modern preventive and cosmetic care for busy San Antonio households.
+          </p>
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>4.9★</strong>
+              <span>Example review average</span>
+            </div>
+            <div class="stat">
+              <strong>Mon–Fri</strong>
+              <span>Convenient weekday hours</span>
+            </div>
+            <div class="stat">
+              <strong>New Patients</strong>
+              <span>Welcome and consultation-ready</span>
+            </div>
+            <div class="stat">
+              <strong>San Antonio</strong>
+              <span>Locally positioned for neighborhood trust</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="services">
+      <div class="container">
+        <div class="section-intro">
+          <h2>Dental services that help patients feel informed, comfortable, and confident</h2>
+          <p class="lead">This demo includes four core services commonly highlighted on high-converting dental landing pages.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Preventive Cleanings</h3>
+            <p>Routine exams, digital x-rays, and gentle cleanings designed to catch issues early and support long-term oral health.</p>
+          </article>
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Cosmetic Whitening</h3>
+            <p>Professional whitening options for patients who want a brighter smile ahead of weddings, photos, or career moments.</p>
+          </article>
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Restorative Care</h3>
+            <p>Tooth-colored fillings, crowns, and treatment planning that balances function, appearance, and patient comfort.</p>
+          </article>
+          <article class="card">
+            <div class="icon">04</div>
+            <h3>Emergency Dentistry</h3>
+            <p>Fast-response support for tooth pain, chipped teeth, and urgent dental concerns when patients need help quickly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" style="background: var(--sky);">
+      <div class="container">
+        <div class="about-wrap">
+          <div class="hero-card about-panel">
+            <h2>Meet Dr. Elena Ramirez</h2>
+            <p class="lead" style="font-size:1rem;">
+              <strong>Fictional doctor bio for demo purposes:</strong> Dr. Elena Ramirez is an example dentist created for this sample page. In this fictional scenario, she brings over a decade of family dentistry experience, combining modern technology with a warm, educational approach that helps nervous patients feel at ease.
+            </p>
+            <ul class="checklist">
+              <li>Focused on clear explanations and low-stress appointments</li>
+              <li>Passionate about preventive care for growing families</li>
+              <li>Committed to creating a welcoming, bilingual-friendly office atmosphere</li>
+            </ul>
+          </div>
+
+          <div class="hero-card bio-panel">
+            <h2>What this practice stands for</h2>
+            <p>Bright Smile Dental is presented as a neighborhood-first office serving San Antonio patients with friendly guidance, transparent treatment conversations, and a strong emphasis on trust.</p>
+            <div class="mini-panel">
+              <h3 style="margin-bottom:0.5rem;">Office vibe</h3>
+              <p style="margin:0; color:var(--muted);">Bright, modern, family-friendly, and built to make first visits feel comfortable instead of intimidating.</p>
+            </div>
+            <div class="mini-panel" style="margin-top:1rem;">
+              <h3 style="margin-bottom:0.5rem;">Ideal audience</h3>
+              <p style="margin:0; color:var(--muted);">Busy parents, professionals, and new residents searching for a reliable local dental home.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-intro">
+          <h2>Three trust-building highlights</h2>
+          <p class="lead">These are the kinds of confidence markers that help visitors move from browsing to booking.</p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="card">
+            <div class="icon">✓</div>
+            <h3>Comfort-first experience</h3>
+            <p>Friendly chairside communication, clear next steps, and a patient experience designed to reduce anxiety.</p>
+          </article>
+          <article class="card">
+            <div class="icon">✓</div>
+            <h3>Modern dental technology</h3>
+            <p>Digital imaging and streamlined diagnostics help make visits more efficient and easier to understand.</p>
+          </article>
+          <article class="card">
+            <div class="icon">✓</div>
+            <h3>Flexible patient support</h3>
+            <p>Convenient scheduling and practical treatment planning guidance help patients fit care into real life.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: linear-gradient(180deg, #ffffff 0%, #edf7ff 100%);">
+      <div class="container">
+        <div class="section-intro">
+          <h2>Example patient testimonials</h2>
+          <p class="lead">The quotes below are fictional examples included only to demonstrate layout and messaging.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial">
+            <div class="example-tag">Fictional Example Testimonial</div>
+            <p class="quote">“The team explained every step, got me in quickly, and made what used to be a stressful visit feel easy. This is exactly the kind of office I was hoping to find in San Antonio.”</p>
+            <div class="author">— Example Patient, Sarah M.</div>
+          </article>
+          <article class="testimonial">
+            <div class="example-tag">Fictional Example Testimonial</div>
+            <p class="quote">“From booking to checkout, everything felt organized, welcoming, and modern. If Bright Smile Dental were real, I’d absolutely recommend them to friends and family.”</p>
+            <div class="author">— Example Patient, Jason R.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <h2>Ready to turn a local dental page like this into your next lead source?</h2>
+            <p class="lead" style="margin-bottom:1rem;">
+              This demo shows how a focused landing page can position a dental office clearly, build trust fast, and drive appointment inquiries.
+            </p>
+            <div class="contact-details">
+              <div><strong>Demo Practice:</strong> Bright Smile Dental (fictional example)</div>
+              <div><strong>Location:</strong> San Antonio, TX</div>
+              <div><strong>Call to Action:</strong> Book a consultation / request an appointment</div>
+            </div>
+          </div>
+          <div class="hero-card" style="padding:1.5rem;">
+            <h3>Want one for your business?</h3>
+            <p style="color:var(--muted);">Prometheus CEO builds simple, conversion-focused landing pages for service businesses.</p>
+            <a class="btn btn-primary" href="https://prometheusceo.com/landing-pages" target="_blank" rel="noopener noreferrer" style="width:100%;">View Landing Pages Service</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      This is a sample landing page created by Prometheus CEO — prometheusceo.com/landing-pages
+    </div>
+  </footer>
+</body>
+</html>
