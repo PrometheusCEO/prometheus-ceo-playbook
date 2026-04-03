@@ -1,41 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { demoLibrary } from "./demoLibrary";
 
 export const metadata: Metadata = {
   title: "Demo Examples | Prometheus CEO",
   description:
-    "Explore fictional sample landing page demos built by Prometheus CEO for roofing, dental, and chiropractic businesses.",
+    "Explore fictional sample landing page demos built by Prometheus CEO for local business categories.",
 };
 
-const demos = [
-  {
-    title: "Roofing Demo",
-    niche: "Roofing",
-    description:
-      "A bold local-service landing page built to help a roofing company turn traffic into quote requests.",
-    showcase:
-      "Clear service hierarchy, trust-oriented layout, strong mobile CTA placement, and lead-focused structure.",
-    href: "/demos/roofing.html",
-  },
-  {
-    title: "Dentist Demo",
-    niche: "Dentist",
-    description:
-      "A polished dental practice concept page designed to make booking feel simple and credible.",
-    showcase:
-      "Clean offer presentation, appointment-first messaging, conversion-friendly sections, and approachable visual pacing.",
-    href: "/demos/dental.html",
-  },
-  {
-    title: "Chiropractor Demo",
-    niche: "Chiropractor",
-    description:
-      "A service-page concept for a chiropractic clinic focused on clarity, trust, and easy next steps.",
-    showcase:
-      "Direct positioning, outcome-focused copy flow, local-business structure, and streamlined inquiry paths.",
-    href: "/demos/chiro.html",
-  },
-];
+const demos = demoLibrary;
 
 export default function ExamplesPage() {
   return (
@@ -46,21 +19,18 @@ export default function ExamplesPage() {
             Sample demo examples built by Prometheus CEO
           </span>
           <h1 className="mt-6 text-4xl font-extrabold leading-tight md:text-5xl">
-            Demo examples for businesses that want a sharper landing page style
+            Demo examples for simple category-specific landing pages
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-gray-400">
-            These examples show the kind of landing page direction we can build
-            for your offer, niche, and market — fast, clean, and conversion-focused.
+            These examples show the kind of simple landing page or small-business site we can build for a business in a given niche. They are public proof assets for outreach, not custom builds for a specific company.
           </p>
         </div>
 
         <div className="mx-auto mt-10 max-w-4xl rounded-2xl border border-[#feca57]/20 bg-[#feca57]/10 p-5 text-sm leading-relaxed text-[#ffe8a3] md:p-6">
-          <strong className="text-white">Important:</strong> These are fictional
-          demo examples created to showcase style and positioning. They are not
-          client case studies, performance claims, or real business portfolios.
+          <strong className="text-white">Important:</strong> These are fictional sample pages created to show style and structure for a business category. They are not client case studies and they are not presented as custom work for the businesses contacted.
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {demos.map((demo) => (
             <article
               key={demo.href}
@@ -73,7 +43,7 @@ export default function ExamplesPage() {
                 </span>
               </div>
 
-              <p className="text-gray-400 leading-relaxed">{demo.description}</p>
+              <p className="leading-relaxed text-gray-400">{demo.description}</p>
 
               <div className="mt-6 rounded-xl border border-white/10 bg-black/20 p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
