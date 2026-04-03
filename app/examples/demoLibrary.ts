@@ -14,6 +14,8 @@ export type DemoEntry = {
   primaryCta: string;
   secondaryCta: string;
   offerLabel: string;
+  heroImage?: string;
+  heroImageAlt?: string;
   serviceItems: string[];
   proofItems: string[];
   processItems: string[];
@@ -76,6 +78,8 @@ export const demoLibrary: DemoEntry[] = [
   },
   {
     slug: "nail-salon",
+    heroImage: "/demo-images/niches/nail-salon.webp",
+    heroImageAlt: "Sample nail salon collage with manicure scenes.",
     niche: "Nail salon",
     title: "Nail Salon Example",
     description: "A simple nail salon example page built to show services, prices, and easy booking/contact info.",
@@ -94,6 +98,8 @@ export const demoLibrary: DemoEntry[] = [
   },
   {
     slug: "auto-repair",
+    heroImage: "/demo-images/niches/auto-repair.webp",
+    heroImageAlt: "Sample auto repair collage with mechanic and service scenes.",
     niche: "Auto repair",
     title: "Auto Repair Example",
     description: "A practical auto repair page example built to help local drivers find services, hours, and contact details fast.",
@@ -112,6 +118,8 @@ export const demoLibrary: DemoEntry[] = [
   },
   {
     slug: "shoe-repair",
+    heroImage: "/demo-images/niches/shoe-repair.webp",
+    heroImageAlt: "Sample shoe repair collage with cobbler and repair scenes.",
     niche: "Shoe repair",
     title: "Shoe Repair Example",
     description: "A compact shoe repair page example built to show repair services, turnaround notes, and direct contact details.",
@@ -130,6 +138,8 @@ export const demoLibrary: DemoEntry[] = [
   },
   {
     slug: "locksmith",
+    heroImage: "/demo-images/niches/locksmith.webp",
+    heroImageAlt: "Sample locksmith collage with mobile locksmith service scenes.",
     niche: "Locksmith",
     title: "Locksmith Example",
     description: "A straightforward locksmith page example built to make service area, contact details, and emergency help easy to find.",
@@ -148,6 +158,8 @@ export const demoLibrary: DemoEntry[] = [
   },
   {
     slug: "florist",
+    heroImage: "/demo-images/niches/florist.webp",
+    heroImageAlt: "Sample florist collage with bouquet and flower shop scenes.",
     niche: "Florist",
     title: "Florist Example",
     description: "A clean florist page example built to show arrangements, occasions, and direct order/contact details.",
@@ -166,6 +178,8 @@ export const demoLibrary: DemoEntry[] = [
   },
   {
     slug: "acupuncture",
+    heroImage: "/demo-images/niches/acupuncture.webp",
+    heroImageAlt: "Sample acupuncture clinic collage with practitioner and treatment scenes.",
     niche: "Acupuncture",
     title: "Acupuncture Example",
     description: "A calm acupuncture page example built to explain treatments, build trust, and make first contact simple.",
@@ -184,6 +198,8 @@ export const demoLibrary: DemoEntry[] = [
   },
   {
     slug: "tattoo",
+    heroImage: "/demo-images/niches/tattoo.webp",
+    heroImageAlt: "Sample tattoo studio collage with artist and tattooing scenes.",
     niche: "Tattoo shop",
     title: "Tattoo Shop Example",
     description: "A simple tattoo shop example built to show style, artist info, and a clear path for inquiries.",
@@ -202,6 +218,8 @@ export const demoLibrary: DemoEntry[] = [
   },
   {
     slug: "dry-cleaner",
+    heroImage: "/demo-images/niches/dry-cleaner.webp",
+    heroImageAlt: "Sample dry cleaner collage with garment care and customer scenes.",
     niche: "Dry cleaner",
     title: "Dry Cleaner Example",
     description: "A simple dry cleaner page example built to show services, hours, location, and direct contact info.",
@@ -220,6 +238,8 @@ export const demoLibrary: DemoEntry[] = [
   },
   {
     slug: "barber",
+    heroImage: "/demo-images/niches/barber.webp",
+    heroImageAlt: "Sample barber shop collage with barber and grooming scenes.",
     niche: "Barber shop",
     title: "Barber Shop Example",
     description: "A simple barber shop example built to show services, hours, location, and direct booking/contact details.",

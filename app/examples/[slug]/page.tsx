@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { demoLibrary, demoMap } from "../demoLibrary";
@@ -39,7 +40,7 @@ export default function DemoDetailPage({ params }: { params: { slug: string } })
       </div>
 
       <main className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
-        <section className="grid gap-8 rounded-[28px] border border-[#e5edf5] bg-white px-6 py-10 shadow-[rgba(50,50,93,0.18)_0px_30px_45px_-30px,rgba(0,0,0,0.08)_0px_18px_36px_-18px] md:grid-cols-[1.15fr_0.85fr] md:px-10 md:py-12">
+        <section className="grid gap-8 rounded-[28px] border border-[#e5edf5] bg-white px-6 py-10 shadow-[rgba(50,50,93,0.18)_0px_30px_45px_-30px,rgba(0,0,0,0.08)_0px_18px_36px_-18px] md:grid-cols-[1.05fr_0.95fr] md:px-10 md:py-12">
           <div>
             <span className="inline-flex rounded-md border border-[#d6d9fc] bg-[#f4f1ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#533afd]">
               Sample / demo page
@@ -69,19 +70,42 @@ export default function DemoDetailPage({ params }: { params: { slug: string } })
             </div>
           </div>
 
-          <div className="rounded-[24px] border border-[#e5edf5] bg-[linear-gradient(180deg,#f9fbff_0%,#eef3fb_100%)] p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#533afd]">Offer</p>
-            <h2 className="mt-3 text-2xl font-light tracking-[-0.03em]">{demo.offerLabel}</h2>
-            <p className="mt-4 text-sm leading-7 text-[#64748d]">
-              Honest example page for a business in this category. No custom build is implied. It is here to show the type of simple page Prometheus CEO can make public and usable for outreach.
-            </p>
-
-            <div className="mt-6 grid gap-3">
-              {demo.proofItems.map((item) => (
-                <div key={item} className="rounded-xl border border-[#e5edf5] bg-white px-4 py-3 text-sm text-[#273951] shadow-[0_15px_35px_0_rgba(23,23,23,0.06)]">
-                  {item}
+          <div className="space-y-4">
+            {demo.heroImage ? (
+              <div className="overflow-hidden rounded-[24px] border border-[#e5edf5] bg-[#f8fbff] shadow-[rgba(50,50,93,0.18)_0px_30px_45px_-30px,rgba(0,0,0,0.08)_0px_18px_36px_-18px]">
+                <div className="relative aspect-[1/1] bg-[#eef3fb]">
+                  <Image
+                    src={demo.heroImage}
+                    alt={demo.heroImageAlt ?? `${demo.niche} demo preview image`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 42vw"
+                    className="object-cover"
+                    priority
+                  />
                 </div>
-              ))}
+                <div className="border-t border-[#e5edf5] bg-white px-5 py-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#533afd]">Category preview</p>
+                  <p className="mt-2 text-sm leading-7 text-[#64748d]">
+                    Visual proof placed near the hero so the example feels more concrete without implying it was built for one specific business.
+                  </p>
+                </div>
+              </div>
+            ) : null}
+
+            <div className="rounded-[24px] border border-[#e5edf5] bg-[linear-gradient(180deg,#f9fbff_0%,#eef3fb_100%)] p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#533afd]">Offer</p>
+              <h2 className="mt-3 text-2xl font-light tracking-[-0.03em]">{demo.offerLabel}</h2>
+              <p className="mt-4 text-sm leading-7 text-[#64748d]">
+                Honest example page for a business in this category. No custom build is implied. It is here to show the type of simple page Prometheus CEO can make public and usable for outreach.
+              </p>
+
+              <div className="mt-6 grid gap-3">
+                {demo.proofItems.map((item) => (
+                  <div key={item} className="rounded-xl border border-[#e5edf5] bg-white px-4 py-3 text-sm text-[#273951] shadow-[0_15px_35px_0_rgba(23,23,23,0.06)]">
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
