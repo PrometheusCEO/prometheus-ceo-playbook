@@ -76,24 +76,24 @@ export default function RoofingDemoPage({
             src="/demo-images/niches/roofing.png"
             alt="Roof repair and installation collage showing professional roofing work"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-70"
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-800/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/40 to-gray-800/30"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             {isDemo && (
-              <span className="inline-block bg-amber-500/20 border border-amber-500/30 text-amber-200 px-3 py-1 rounded-full text-sm font-medium mb-4">
+              <span className="inline-block bg-amber-500/30 border border-amber-500/40 text-amber-100 px-3 py-1 rounded-full text-sm font-medium mb-4">
                 Example Roofing Landing Page
               </span>
             )}
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
               Professional Roofing Services in {city}
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+            <p className="text-xl text-gray-100 mb-8 max-w-3xl">
               Quality roof repair, replacement, and maintenance with honest pricing and reliable service. 
               Serving {city} and surrounding areas with over 15 years of experience.
             </p>
