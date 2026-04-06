@@ -70,30 +70,30 @@ export default function RoofingDemoPage({
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-12 md:py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white overflow-hidden">
+      <section className="relative py-12 md:py-20 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/demo-images/niches/roofing.png"
             alt="Roof repair and installation collage showing professional roofing work"
             fill
-            className="object-cover opacity-70"
+            className="object-cover"
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/40 to-gray-800/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-black/10"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             {isDemo && (
-              <span className="inline-block bg-amber-500/30 border border-amber-500/40 text-amber-100 px-3 py-1 rounded-full text-sm font-medium mb-4">
+              <span className="inline-block bg-black/30 border border-white/30 text-white px-3 py-1 rounded-full text-sm font-medium mb-4 backdrop-blur-sm">
                 Example Roofing Landing Page
               </span>
             )}
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-lg">
               Professional Roofing Services in {city}
             </h1>
-            <p className="text-xl text-gray-100 mb-8 max-w-3xl">
+            <p className="text-xl text-white mb-8 max-w-3xl drop-shadow-md">
               Quality roof repair, replacement, and maintenance with honest pricing and reliable service. 
               Serving {city} and surrounding areas with over 15 years of experience.
             </p>
