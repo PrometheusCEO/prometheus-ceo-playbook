@@ -70,8 +70,20 @@ export default function RoofingDemoPage({
       </nav>
 
       {/* Hero Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-        <div className="container mx-auto px-4">
+      <section className="relative py-12 md:py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/demo-images/niches/roofing.png"
+            alt="Roof repair and installation collage showing professional roofing work"
+            fill
+            className="object-cover opacity-30"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-800/80"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             {isDemo && (
               <span className="inline-block bg-amber-500/20 border border-amber-500/30 text-amber-200 px-3 py-1 rounded-full text-sm font-medium mb-4">
